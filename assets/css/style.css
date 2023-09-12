@@ -219,6 +219,11 @@ a {
     text-align: center;
   }
 }
+@media (max-width: 576px) {
+  .content .hero-section .content-wrap h1 {
+    font-size: 20px;
+  }
+}
 .content .hero-section .content-wrap p {
   color: #fff;
   line-height: 28px;
@@ -289,6 +294,11 @@ a {
   width: 100%;
   position: relative;
 }
+@media (max-width: 576px) {
+  .content .statics .img {
+    margin-top: 32px;
+  }
+}
 .content .statics .img img {
   max-width: 100%;
   border-radius: 24px;
@@ -352,7 +362,7 @@ a {
 }
 .content .statics .statics-card h4 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
   color: #000000;
@@ -628,7 +638,6 @@ a {
 .content .contact-us {
   padding: 70px 0;
   position: relative;
-  overflow-x: hidden;
   background: #fffbfc;
 }
 .content .contact-us .map-area {
@@ -752,7 +761,7 @@ a {
 
 footer {
   padding: 40px 0;
-  background: #f9f9f9;
+  background: #fffbfc;
 }
 footer .footer {
   gap: 28px;

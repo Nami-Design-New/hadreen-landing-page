@@ -226,6 +226,9 @@ a {
         @media (max-width: 992px) {
           text-align: center;
         }
+        @media (max-width: 576px) {
+          font-size: 20px;
+        }
       }
       p {
         color: $white-color;
@@ -300,6 +303,9 @@ a {
     .img {
       width: 100%;
       position: relative;
+      @media (max-width: 576px) {
+        margin-top: 32px;
+      }
       img {
         max-width: 100%;
         border-radius: 24px;
@@ -359,7 +365,7 @@ a {
       }
       h4 {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 18px;
         text-align: center;
         margin: 0;
         color: $black-color;
@@ -626,7 +632,6 @@ a {
   .contact-us {
     padding: 70px 0;
     position: relative;
-    overflow-x: hidden;
     background: #fffbfc;
     .map-area {
       margin-top: 60px;
@@ -733,7 +738,7 @@ a {
 }
 footer {
   padding: 40px 0;
-  background: #f9f9f9;
+  background: #fffbfc;
   .footer {
     gap: 28px;
     display: flex;
