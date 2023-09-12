@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "HelveticaNeueLTProLt";
+  src: url("../webfonts/HelveticaNeueLTProLt.otf");
+}
 :target {
   scroll-margin-top: 80px;
 }
@@ -21,7 +24,7 @@
   scroll-behavior: smooth;
   direction: rtl;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Noto Kufi Arabic", sans-serif;
+  font-family: "HelveticaNeueLTProLt";
 }
 
 body {
@@ -242,6 +245,7 @@ a {
   }
 }
 .content .statics .about-description {
+  padding-left: 16px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -327,7 +331,6 @@ a {
   text-align: center;
   color: #000000;
   margin: 0;
-  font-weight: 600;
 }
 .content .statics .features {
   background: #fffbfc;
@@ -349,7 +352,7 @@ a {
 }
 .content .statics .statics-card h4 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   margin: 0;
   color: #000000;
@@ -677,8 +680,8 @@ a {
      object-fit: cover;
   width: 100%;
   border-radius: 16px;
-  -o-object-position: right;
-     object-position: right;
+  -o-object-position: center;
+     object-position: center;
 }
 .content .download-app {
   width: 100%;
