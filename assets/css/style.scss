@@ -97,18 +97,21 @@ a {
       height: 100%;
       @media (max-width: 768px) {
         position: fixed;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-direction: column;
         transition: all 0.5s ease-in-out;
-        left: -100%;
+        right: -60%;
         top: 80px;
-        width: 100%;
+        width: 60%;
         height: calc(100vh - 80px);
         background-color: $white-color;
         &.showing {
-          left: 0;
+          right: 0;
         }
         ul {
           flex-direction: column;
-          justify-content: center;
           .nav-link {
             height: 70px !important;
           }
@@ -117,6 +120,10 @@ a {
       ul {
         display: flex;
         height: 100%;
+        @media (max-width: 768px) {
+          height: auto;
+          align-items: flex-start;
+        }
         .nav-link {
           height: 100%;
           padding: 0 16px;
@@ -148,6 +155,44 @@ a {
         }
       }
     }
+    .social {
+      display: flex;
+      gap: 16px;
+      &.sm-screens {
+        display: none;
+        @media (max-width: 768px) {
+          display: flex;
+          padding: 0 16px;
+        }
+      }
+      li {
+        width: 40px;
+        a {
+          transition: all .3s ease-in-out;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #777;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #777;
+        }
+        &:hover {
+          a {
+            border-color: $main-color;
+            color: $main-color;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        &.xl-screens {
+          display: none;
+        }
+        flex-direction: row !important;
+        height: 40px !important;
+      }
+    }
   }
   .btn {
     border-radius: 8px;
@@ -159,6 +204,7 @@ a {
     @include centerFlex();
     i {
       font-size: 18px;
+      transform: scale(-1);
     }
   }
   .toogler {
@@ -172,88 +218,25 @@ a {
 .content {
   width: 100%;
   .hero-section {
-    position: relative;
-    margin-top: 16px;
-    .container {
-      .row {
-        margin: 0;
-        border-radius: 32px;
-        background-image: linear-gradient(
-          270deg,
-          #9a112f 13.9%,
-          #d61842 75.76%
-        );
-        align-items: center;
-        height: calc(100vh - 100px);
-        max-height: 700px;
-        padding: 32px 64px;
-        overflow: hidden;
-        @media (max-width: 576px) {
-          padding: 32px 24px;
-          height: calc(120vh - 100px);
-        }
-      }
-    }
-    .mockup {
-      position: relative;
+    height: 100vh ;
+    .swiper {
       display: flex;
-      align-items: center;
-      isolation: isolate;
-      transform: translateY(80px);
-      justify-content: center;
-      @media (max-width: 576px) {
-        transform: translateY(50px);
-      }
-      img {
-        width: 70%;
-        &:nth-child(2) {
-          margin-right: -120px;
-          margin-bottom: -150px;
-          z-index: -1;
-        }
-      }
-    }
-    .content-wrap {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
-      h1 {
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 44px;
-        color: $white-color;
-        @media (max-width: 992px) {
-          text-align: center;
-        }
-        @media (max-width: 576px) {
-          font-size: 20px;
-        }
-      }
-      p {
-        color: $white-color;
-        line-height: 28px;
-        font-size: 16px;
-        @media (max-width: 992px) {
-          text-align: center;
-        }
-      }
-      .btns {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+      height: 100%;
+      .swiper-slide {
+        width: 100%;
         img {
-          height: 52px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
         }
-        @media (max-width: 768px) {
-          justify-content: center;
-        }
+      }
+      .swiper-pagination-bullet {
+        background: $main-color;
       }
     }
   }
-  .statics {
+  .about {
     .about-description {
       padding-left: 16px;
       height: 100%;
@@ -348,10 +331,11 @@ a {
         }
       }
     }
-    .features {
-      background: #fffbfc;
-      margin: 120px 0 70px 0;
-    }
+  }
+  .features {
+    background: #fffbfc;
+    margin: 70px 0;
+    padding: 60px 0;
     .statics-card {
       box-shadow: rgb(0 0 0 / 5%) -5px 6px 20px 0px;
       padding: 32px 16px;
@@ -521,99 +505,6 @@ a {
       }
     }
   }
-  .features {
-    position: relative;
-    padding: 60px 0;
-    .toop {
-      position: absolute;
-      right: 40px;
-      top: 100px;
-      animation: swing-right 5s linear infinite;
-      @media (max-width: 450px) {
-        top: 20px;
-      }
-    }
-    .bottom {
-      position: absolute;
-      left: 40px;
-      bottom: 0;
-      animation: swing-left 5s linear infinite;
-    }
-    @keyframes swing-left {
-      0% {
-        left: 40px;
-      }
-      25% {
-        left: 60px;
-      }
-      50% {
-        left: 80px;
-      }
-      75% {
-        left: 60px;
-      }
-      100% {
-        left: 40px;
-      }
-    }
-    @keyframes swing-right {
-      0% {
-        right: 40px;
-      }
-      25% {
-        right: 60px;
-      }
-      50% {
-        right: 80px;
-      }
-      75% {
-        right: 60px;
-      }
-      100% {
-        right: 40px;
-      }
-    }
-    .title {
-      color: $black-color;
-      font-weight: 600;
-      margin-bottom: 48px;
-    }
-    .feature-card {
-      box-shadow: $shadow;
-      background: $white-color;
-      height: 100%;
-      padding: 24px 16px;
-      border-radius: 16px;
-      @include centerFlex();
-      flex-direction: column;
-      position: relative;
-      z-index: 9;
-      .icon {
-        @include centerFlex();
-        background: $main-color;
-        border-radius: 16px;
-        height: 78px;
-        width: 78px;
-        margin-bottom: 28px;
-        img {
-          max-height: 40px;
-        }
-      }
-      h4 {
-        color: $black-color;
-        font-weight: 600;
-        font-size: 20px;
-        margin-bottom: 12px;
-      }
-      p {
-        margin: 0;
-        text-align: center;
-        color: $text-color;
-        line-height: 24px;
-        font-size: 14px;
-      }
-    }
-  }
   .faq {
     padding: 60px 0;
     h3 {
@@ -742,6 +633,14 @@ footer {
   .footer {
     gap: 28px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @media (max-width: 576px) {
+      height: 200px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
     .logo img {
       max-height: 60px;
     }
@@ -789,6 +688,10 @@ footer {
         max-height: 20px;
       }
     }
+    @media (max-width: 768px) {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 .sectionTitle {
@@ -807,5 +710,18 @@ footer {
     margin: auto;
     line-height: 1.2;
     font-size: 14px;
+  }
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  background-image: linear-gradient(#00000050, #00000050);
+  z-index: 3;
+  display: none;
+  &.show {
+    display: block;
   }
 }

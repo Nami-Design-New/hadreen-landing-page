@@ -9,10 +9,10 @@ function startCount(element) {
     }
   }, 4000 / goal);
 }
-window.onscroll = function () {
+window.onscroll = function() {
   if (this.scrollY >= 100) {
     if (!started) {
-      numbers.forEach((num) => startCount(num));
+      numbers.forEach(num => startCount(num));
     }
     started = true;
   }
@@ -21,13 +21,13 @@ let navLinks = document.querySelectorAll(".nav-link a");
 let sections = document.querySelectorAll(".sec");
 let current;
 window.addEventListener("scroll", () => {
-  sections.forEach((sec) => {
+  sections.forEach(sec => {
     let secTop = sec.offsetTop;
     if (pageYOffset >= secTop - 100) {
       current = sec.getAttribute("id");
     }
   });
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.classList.remove("active");
     if (link.classList.contains(current)) {
       link.classList.add("active");
@@ -36,8 +36,10 @@ window.addEventListener("scroll", () => {
 });
 let toogler = document.querySelector(".toogler");
 let menu = document.querySelector(".nav-links");
+let layer = document.querySelector(".layer");
 toogler.addEventListener("click", () => {
   menu.classList.toggle("showing");
+  layer.classList.toggle("show");
   menu.classList.contains("showing")
     ? (toogler.querySelector("i").classList =
         "fa-sharp fa-solid fa-bars-staggered")
@@ -52,7 +54,7 @@ var phoneImgs = new Swiper(".phoneImgs", {
   speed: 1000,
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: false
   },
   loop: true,
   slidesPerView: "auto",
@@ -61,18 +63,18 @@ var phoneImgs = new Swiper(".phoneImgs", {
     stretch: 10,
     depth: 200,
     modifier: 1.2,
-    slideShadows: true,
+    slideShadows: true
   },
   navigation: {
     nextEl: ".appSliderNext",
-    prevEl: ".appSliderPrev",
-  },
+    prevEl: ".appSliderPrev"
+  }
 });
 // aos
 //aos Delay
-$("section").each(function () {
+$("section").each(function() {
   const sectionDivs = $(this).find("[data-aos]");
-  sectionDivs.each(function (index) {
+  sectionDivs.each(function(index) {
     $(this).attr("data-aos-delay", (index + 1) * 100);
   });
 });
@@ -82,5 +84,14 @@ AOS.init({
   delay: 50,
   duration: 750,
   // easing: "linear",
-  once: true,
+  once: true
+});
+//hero swiper
+var swiper = new Swiper(".heroSwiper", {
+  effect: "fade",
+  speed: 1000,
+  pagination: {
+    el: ".mainSliderPagination",
+    clickable: true
+  },
 });

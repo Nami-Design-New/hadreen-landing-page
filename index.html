@@ -15,6 +15,7 @@
 
 <body>
     <!-- header -->
+    <div class="layer"></div>
     <nav class="header">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="logo">
@@ -26,16 +27,38 @@
                         <a class="home active" href="">الرئيسية</a>
                     </li>
                     <li class="nav-link">
-                        <a class="how-it-works" href="#how-it-works">كيف يعمل</a>
-                    </li>
-                    <li class="nav-link">
                         <a class="features" href="#features">المميزات</a>
                     </li>
                     <li class="nav-link">
-                        <a class="contact-us" href="#contact-us">تواصل معنا</a>
+                        <a class="about" href="#about">من نحن</a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="how-it-works" href="#how-it-works">كيف يعمل</a>
+                    </li>
+                </ul>
+                <ul class="social sm-screens">
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-sharp fa-light fa-envelope"></i></a>
                     </li>
                 </ul>
             </div>
+            <ul class="social xl-screens">
+                <li>
+                    <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#!"><i class="fa-sharp fa-light fa-envelope"></i></a>
+                </li>
+            </ul>
             <button class="btn toogler">
                 <i class="fa-sharp fa-solid fa-bars"></i>
             </button>
@@ -44,32 +67,116 @@
     <!-- main-wrapper -->
     <main class="content">
         <!-- hero section -->
-        <section id="home" class="hero-section sec">
+        <section class="hero-section sec" id="home">
+            <div class="swiper heroSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/imgs/s1.webp" alt="slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/imgs/s2.webp" alt="slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/imgs/s3.webp" alt="slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/imgs/s4.webp" alt="slide">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/imgs/s5.webp" alt="slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="mainSliderPagination swiper-pagination"></div>
+            </div>
+        </section>
+        <div class="features sec" id="features">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <div class="content-wrap">
-                            <h1 data-aos="fade-up">
-                                مرحبًا! 🌟 نفتح أمامكم أبواب عالم 🌎 مليء بالتفرد والجودة. اكتشفوا منتجات 🎁 تحمل بصمة
-                                الأسر المبدعة. لنبدأ الرحلة! 🚀
-                            </h1>
-                            <p data-aos="fade-up">
-                                حمل التطبيق واستمتع بتجربة تسوق استثنائية ..!
-                            </p>
-                            <div class="btns" data-aos="fade-up">
-                                <a href="#!">
-                                    <img src="assets/imgs/app-store.svg" alt="app-store">
-                                </a>
-                                <a href="#!">
-                                    <img src="assets/imgs/google-play.svg" alt="google-play">
-                                </a>
+                    <div class="col-lg-3 col-6 p-lg-3 p-2">
+                        <div class="statics-card" data-aos="fade-up">
+                            <img src="assets/imgs/fast.svg" alt="downloads">
+                            <h4>توصيل سريع للطلبات</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 p-lg-3 p-2">
+                        <div class="statics-card" data-aos="fade-up">
+                            <img src="assets/imgs/varity.svg" alt="star">
+                            <div class="d-flex align-content-center gap-2">
+                                <h4>تنوع الاقسام والمنتجات</h4>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-6 p-lg-3 p-2">
+                        <div class="statics-card" data-aos="fade-up">
+                            <img src="assets/imgs/easy_pay.svg" alt="driver">
+                            <div class="d-flex align-content-center gap-2">
+                                <h4>سهولة عملية الدفع</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6 p-lg-3 p-2">
+                        <div class="statics-card" data-aos="fade-up">
+                            <img src="assets/imgs/app.svg" alt="Ride Completion">
+                            <div class="d-flex align-content-center gap-2">
+                                <h4>تطبيق سهل الاستخدام</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- about -->
+        <section id="about" class="about sec">
+            <div class="container my-5">
+                <div class="row">
                     <div class="col-lg-6 col-12">
-                        <div class="mockup">
-                            <img src="assets/imgs/mouckup-sp.svg" data-aos="fade-up" alt="mouckup">
-                            <img src="assets/imgs/mouckup-sp2.svg" data-aos="fade-up" alt="mouckup">
+                        <div class="about-description" data-aos="fade-down">
+                            <h2>
+                                مرحبًا بك في تطبيق حاضرين - متجرك الشخصي لعالم التسوق الرقمي!
+                            </h2>
+                            <h6>
+                                🌟 من نحن؟
+                            </h6>
+                            <p>
+                                حاضرين عبارة عن منصة تجارة إلكترونية متعددة البائعين، يهدف إلى مساعدة الأسر السعودية
+                                والمشاريع الناشئة للوصول إلى العملاء بشكل أسرع وتحقيق الأرباح والدخل المناسب من
+                                خلال منصة حاضرين
+                            </p>
+                            <h6>
+                                📦 ماذا نقدم؟
+                            </h6>
+                            <p>
+                                حاضرين هو مكانك لاستكشاف وشراء مئات الآلاف من المنتجات عبر الإنترنت بكل سهولة.
+                                سواء كنت تبحث عن مستلزمات الحياة اليومية أو العناصر الفاخرة، فإن لدينا تشكيلة متنوعة
+                                ومميزة تلبي جميع احتياجاتك.
+                            </p>
+                            <h6>🚀 رؤيتنا:</h6>
+                            <p>
+                                نحن نسعى جاهدين لتحقيق مستقبل تسوق أفضل وأكثر استدامة، حيث يمكن للجميع الوصول إلى
+                                المنتجات التي يحتاجونها بسهولة وسلاسة. نحن نؤمن بأن التسوق يجب أن يكون تجربة لا تُنسى،
+                                ونحن هنا لجعل ذلك حقيقة.
+                            </p>
+                            <h6>📱 قم بتنزيل التطبيق الآن وابدأ في استكشاف عالم التسوق الرقمي بكل راحة وثقة.</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
+                        <div data-aos="fade-up">
+                            <div class="img">
+                                <img src="assets/imgs/about.jpeg" alt="">
+                                <div class="thumb">
+                                    <img src="assets/imgs/fast.svg" alt="">
+                                    <h6>هل تحتاجها على وجه السرعة؟ لدينا كل ما تحتاجه! 🚀</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -134,89 +241,6 @@
                             <img class="legend" src="assets/imgs/legend.svg" alt="">
                             <img class="img1" src="assets/imgs/mouckup-sp.svg" alt="mouckup4">
                             <img class="img2" src="assets/imgs/mouckup-sp2.svg" alt="mouckup5">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- statics -->
-        <section class="statics">
-            <div class="container my-5">
-                <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <div class="about-description" data-aos="fade-down">
-                            <h2>
-                                مرحبًا بك في تطبيق حاضرين - متجرك الشخصي لعالم التسوق الرقمي!
-                            </h2>
-                            <h6>
-                                🌟 من نحن؟
-                            </h6>
-                            <p>
-                                نحن نعتبر أنفسنا رفاقك المخلصين في رحلة التسوق الرقمي. بدءًا من 2015، ابتكرنا
-                                حاضرين لنجعل تجربتك في التسوق عبر الإنترنت أسهل وأكثر متعة.
-                            </p>
-                            <h6>
-                                📦 ماذا نقدم؟
-                            </h6>
-                            <p>
-                                حاضرين هو مكانك لاستكشاف وشراء مئات الآلاف من المنتجات عبر الإنترنت بكل سهولة.
-                                سواء كنت تبحث عن مستلزمات الحياة اليومية أو العناصر الفاخرة، فإن لدينا تشكيلة متنوعة
-                                ومميزة تلبي جميع احتياجاتك.
-                            </p>
-                            <h6>🚀 رؤيتنا:</h6>
-                            <p>
-                                نحن نسعى جاهدين لتحقيق مستقبل تسوق أفضل وأكثر استدامة، حيث يمكن للجميع الوصول إلى
-                                المنتجات التي يحتاجونها بسهولة وسلاسة. نحن نؤمن بأن التسوق يجب أن يكون تجربة لا تُنسى،
-                                ونحن هنا لجعل ذلك حقيقة.
-                            </p>
-                            <h6>📱 قم بتنزيل التطبيق الآن وابدأ في استكشاف عالم التسوق الرقمي بكل راحة وثقة.</h6>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
-                        <div data-aos="fade-up">
-                            <div class="img">
-                                <img src="assets/imgs/about.jpeg" alt="">
-                                <div class="thumb">
-                                    <img src="assets/imgs/fast.svg" alt="">
-                                    <h6>هل تحتاجها على وجه السرعة؟ لدينا كل ما تحتاجه! 🚀</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="features sec" id="features">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-6 p-lg-3 p-2">
-                            <div class="statics-card" data-aos="fade-up">
-                                <img src="assets/imgs/fast.svg" alt="downloads">
-                                <h4>توصيل سريع للطلبات</h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 p-lg-3 p-2">
-                            <div class="statics-card" data-aos="fade-up">
-                                <img src="assets/imgs/varity.svg" alt="star">
-                                <div class="d-flex align-content-center gap-2">
-                                    <h4>تنوع الاقسام والمنتجات</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 p-lg-3 p-2">
-                            <div class="statics-card" data-aos="fade-up">
-                                <img src="assets/imgs/easy_pay.svg" alt="driver">
-                                <div class="d-flex align-content-center gap-2">
-                                    <h4>سهولة عملية الدفع</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 p-lg-3 p-2">
-                            <div class="statics-card" data-aos="fade-up">
-                                <img src="assets/imgs/app.svg" alt="Ride Completion">
-                                <div class="d-flex align-content-center gap-2">
-                                    <h4>تطبيق سهل الاستخدام</h4>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -308,7 +332,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12 flex-lg-row flex-column  d-flex justify-content-between align-items-center footer">
+                <div class="col-12 footer">
                     <a class="logo" href="index.html">
                         <img src="assets/imgs/logo.svg" alt="logo">
                     </a>
